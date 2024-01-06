@@ -19,9 +19,13 @@ span.show {
   display: inline-block;
 }
 
-a.clickable {
+a:link {
   color: var(--bs-secondary);
   cursor: help;
   text-decoration: none;
+}
+
+a:visited {
+  color: var(--bs-primary-border-subtle);
 }
 
