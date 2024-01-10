@@ -29,3 +29,9 @@ a:visited {
   color: var(--bs-primary-border-subtle);
 }
 
+span.normal {
+  visibility: visible;
+  opacity: 1;
+  color: var(--bs-primary);
+}
+

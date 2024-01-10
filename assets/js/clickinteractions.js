@@ -1,41 +1,33 @@
 document.getElementById("intro1").onclick = function () {
-    document.getElementById("intro2").classList.add("show");
-    document.getElementById("intro1").classList.remove("clickable");
-    document.getElementById("intro1").classList.add("show");
+    appeartext("intro1", "intro2", "intro3");
+    document.getElementById("intro4").classList.add("show");
+    document.getElementById("advent").classList.add("clickable");
+}
+
+document.getElementById("advent").onclick = function() {
+    appeartext("advent", "sword", "swordthing");
 }
 
 document.getElementById("intro3").onclick = function () {
-    document.getElementById("name1").classList.add("show");
-    document.getElementById("intro3").classList.remove("clickable");
-    document.getElementById("intro3").classList.add("show");
+    appeartext("intro3", "name1", "name2")
 }
 
 document.getElementById("name2").onclick = function () {
-    document.getElementById("name3").classList.add("show");
-    document.getElementById("name2").classList.remove("clickable");
-    document.getElementById("name2").classList.add("show");
-}
-
-document.getElementById("woo").onclick = function () {
-    document.getElementById("woo2").classList.add("show");
-    document.getElementById("woo").classList.remove("clickable");
-    document.getElementById("woo").classList.add("show");
+    appeartext("name2", "name3", "further1");
 }
 
 document.getElementById("further1").onclick = function () {
-    document.getElementById("anyways").classList.add("show");
-    document.getElementById("further1").classList.remove("clickable");
-    document.getElementById("further1").classList.add("show");
-}
-
-document.getElementById("anyways").onclick = function () {
-    document.getElementById("about1").classList.add("show");
-    document.getElementById("anyways").classList.remove("clickable");
-    document.getElementById("anyways").classList.add("show");
+    appeartext("further1", "about1", "about1");
+    document.getElementById("about1").classList.remove("show");
 }
 
 document.getElementById("about1").onclick = function () {
-    document.getElementById("about2").classList.add("show");
-    document.getElementById("about1").classList.remove("clickable");
-    document.getElementById("about1").classList.add("show");
+    appeartext("about1", "about2", "nothing");
+}
+
+function appeartext(clicked, reveal, activate) {
+    document.getElementById(reveal).classList.add("show");
+    document.getElementById(clicked).classList.remove("clickable");
+    document.getElementById(clicked).classList.add("show");
+    document.getElementById(activate).classList.add("clickable");
 }
