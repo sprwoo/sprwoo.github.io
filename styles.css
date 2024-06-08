@@ -1,0 +1,34 @@
+body {
+    padding: 100px;
+    background-color: #212227;
+    font-family: 'Amiko';
+    cursor: default;
+}
+
+span {
+    display: none;
+    opacity: 0;
+    transition: opacity 1s, display 0.5s;
+}
+
+span.show {
+    display: inline-block;
+    opacity: 1;
+    font-size: 20px;
+    color: #8693AB;
+    transition: all 2.5s;
+}
+
+span.click {
+    display: inline-block;
+    opacity: 1;
+    font-size: 20px;
+    color: #BDD4E7;
+    cursor: help;
+    animation: appear 1s
+}
+
+@keyframes appear {
+    from {opacity: 0;}
+    to {opacity:1;}
+}
